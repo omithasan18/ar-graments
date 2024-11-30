@@ -1,0 +1,18 @@
+
+
+@use "../base/colors" as *;
+
+@import url(/node_modules/bootstrap/scss/bootstrap.scss);
+
+
+
+$shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+$shadow-light: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+$shadow-sm: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+$shadow-lg: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+
+$shadow-lg-dark: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+$gradient-primary: linear-gradient(90deg, $primary, lighten($primary, 16));
+$gradient-secondary: linear-gradient(90deg, $secondary, lighten($secondary, 16));

@@ -1,0 +1,317 @@
+
+@use "base" as *;
+@use "components" as *;
+@use "layouts" as *;
+@use "pages" as *;
+@use "partials" as *;
+
+
+.bg-img{
+    background-image: url(../img/world2.jpg);
+    filter: grayscale(100%);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -100 !important;
+}
+
+
+.top-slider{
+    .carousel-inner{
+        .carousel-item{
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #8baa4d7a; /* Black overlay with 50% transparency */
+                z-index: 1; /* Overlay stays on top of the image */
+            }
+            .slider-img{
+                width: 100%;
+                height: 760px;
+                object-fit: cover;
+                
+            }
+
+           
+            .carousel-caption{
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -60%);
+                width: 100%;
+                z-index: 2; /* Ensure text is on top of the overlay */
+                
+                .heading{
+                    color: $white;
+                    text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+                }
+                .sub-heading{ text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5); color: $white;}
+                .text{ text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.5); color: $white; margin-top: 1rem;}
+                .btn{margin-top: 48px;}
+                
+            }
+        }
+    }
+}
+
+.about{
+    background: $bg-light;
+}
+
+// management start 
+.management{
+    background: $bg-white;
+}
+
+// certification css start 
+.certification{
+    background: $bg-light;
+    .certificate{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 1px solid $primary;
+        border-radius: 10px;
+        padding: 8px;
+    }
+}
+
+
+// collections start 
+.collections{
+    background: $bg-white;
+}
+
+.collection-item{
+    width: 100%;
+    height: 300px ;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid $light;
+}
+
+
+
+.clients{background: $bg-primary-opacity-80;
+    .section-heading{color: $white;}
+    .text{color: $light;}
+}
+
+
+.client-page-bg{
+    .section-heading{color: $dark;}
+    .text{color: $text-color;}
+    background: none;
+}
+
+.client-item{
+    width: 100%;
+    height: 120px ;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid $light;
+}
+
+
+
+// career start 
+.career{
+    .career-wrap{
+        .career-box{
+            border-radius: 8px;
+            background: $primary;
+            padding: 48px;
+            padding-top: 30px;
+            .section-heading{color: $white}
+            .text{color:$light}
+        }
+    }
+}
+
+
+// media start 
+@media (max-width: 1600px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 597px;
+                }
+            
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 557px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 518px;
+                }
+               
+                .carousel-caption{
+                    top: 55%;
+                    transform: translate(-50%, -55%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 478px;
+                }
+               
+            }
+        }
+    }
+
+    .collection-item{
+        height: 200px ;
+    }
+    .client-item{
+        height: 80px ;
+    }
+    
+}
+
+@media (max-width: 1100px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 438px;
+                }
+               
+                .carousel-caption{
+                        .btn{margin-top: 24px;}
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 395px;
+                }
+            }
+        }
+    }
+
+    // }
+    .client-item{
+        height: 60px ;
+    }
+}
+
+
+@media (max-width: 892px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 355px;
+                }
+               
+                .carousel-caption{
+                    top: 46%;
+                    transform: translate(-50%, -46%);
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .top-slider{
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 306px;
+                }
+            }
+        }
+    }
+
+    .client-item{
+        height: 80px ;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .top-slider{
+        .slider-btn{
+            width: 12px;
+        }
+        .carousel-inner{
+            .carousel-item{
+                .slider-img{
+                    height: 229px;
+                }
+               
+                .carousel-caption{
+                    top: 37%;
+                    transform: translate(-50%, -37%);
+                    
+                    .heading{
+                        text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+                    }
+                    .sub-heading{ text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); margin-top: -4px; }
+                    .text{ text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); margin-top: .3rem;}
+                    .btn{margin-top: 8px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// boostrap css link 
+@import url(../node_modules/bootstrap/dist/css/bootstrap.css);
+@import url(../node_modules/bootstrap/scss/bootstrap.scss);

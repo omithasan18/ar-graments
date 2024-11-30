@@ -1,0 +1,132 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+
+.contact-us{
+    padding: 7.5rem 0;
+    background: $bg-white;
+    .contact-wrap{
+        .section-heading{
+            display: flex;
+            justify-content: center;
+        }
+        .heading{text-align: center;}
+
+        .contact-card{
+            transition: .4s;
+            padding: 32px;
+            border-radius: 10px;
+            height: 100%;
+            background: $bg-white;
+            box-shadow: $shadow-sm;
+            &:hover{
+                box-shadow: $shadow-lg;
+                border: none;
+            }
+            .text{font-size: 18px; margin: 0 !important;}
+        }
+    }
+}
+
+.google-map{
+    iframe{height: 500px;}
+}
+
+
+.support-form{
+    padding: 7.5rem 0;
+    background: $bg-white;
+    position: relative;
+
+    .object-right {
+        position: absolute;
+        top: 50%;
+        right: -70px;
+        transform: translate(0, -50%);
+        img{width: auto; max-width: 100%;}
+    }
+
+    form{
+        .form-control{
+            padding: 1rem 2rem;
+            border: 1px solid $dark;
+            &:focus{border: 1px solid $secondary;}
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .contact-us{
+        padding: 5.5rem 0;
+        .contact-wrap{
+            .contact-card{
+                padding: 24px;
+                .text{font-size: 14px;}
+            }
+        }
+    }
+    
+    .google-map{
+        iframe{height: 400px;}
+    }
+    
+    
+    
+    .support-form{
+        padding: 5.5rem 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .contact-us{
+        padding: 4rem 0;
+        .contact-wrap{
+            .contact-card{
+                padding: 24px;
+                .text{font-size: 13px;}
+            }
+        }
+    }
+    
+    .google-map{
+        iframe{height: 380px;}
+    }
+    
+    
+    
+    .support-form{
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-us{
+        padding: 3rem 0;
+        .contact-wrap{
+            .contact-card{
+                img{width: 28px;}
+                padding: 20px;
+            }
+        }
+    }
+    
+    .google-map{
+        iframe{height: 240px;}
+    }
+    
+    
+    
+    .support-form{
+        padding: 3rem .625rem;
+        form{
+            .form-control{
+                padding: .5rem 1rem;
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@use "../base/" as *;
+@use "../partials/" as *;
+
+.footer{
+    background: lighten($color: $dark, $amount: 7);
+    padding-bottom: 0 ;
+    .footer-box{
+        .logo{
+            height: 44px;
+            width: auto;
+        }
+
+        .title, .card-title{color: $white;}
+        .social-media{
+            li{
+                margin-right: 10px;
+                a{
+                    color: lighten($color: $dark, $amount: 20);;
+                    font-size: 28px;
+                    transition: .4s;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .footer-items{
+            li{
+                margin-top: 8px;
+                a{
+                    color: darken($color: $light, $amount: 24);
+                    &:hover{
+                        color: $light;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1200px) {
+    .footer{
+        .footer-box{
+            .logo{
+                height: 40px;
+            }
+    
+            .social-media{
+                li{
+                    a{
+                        font-size: 22px;
+                    }
+                }
+            }
+            .footer-items{
+                li{
+                    a{
+                        font-size: 14px;
+    
+                    }
+                }
+            }
+        }
+
+        .copyright{
+            font-size: 13px;
+        }
+    }
+}

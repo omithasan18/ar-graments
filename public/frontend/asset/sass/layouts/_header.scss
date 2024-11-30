@@ -1,0 +1,207 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+// navbar css start
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent; // Initially transparent
+    transition: background-color 0.3s, top 0.3s;
+    border-bottom: 1px solid $primary;
+    
+    &.fixed-nav {
+      top: 0;
+      background-color: $primary; // White background after scrolling
+    //   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow when scrolled
+      box-shadow: $shadow-sm;
+      border-bottom: none;
+      animation: fadeInDown 0.5s ease-in-out;
+    //   .nav-link{color: $dark !important;}
+    }
+    .navbar-toggler:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    .offcanvas{
+        padding: 2rem 0;
+        .btn-close:focus{
+            outline: none;
+            box-shadow: none;
+            font-size: .8rem !important;
+        }
+       
+        .navbar-nav{
+            align-items: center;
+            .nav-item{
+                font-size: 1rem;
+                margin-left: 16px;
+                font-family: $primary-font;
+                font-weight: $semibold;
+                position: relative;
+                .nav-link{
+                    color: $white;
+                    letter-spacing: 2px;
+                    transition: 0.3s;
+                    &:hover{
+                        color: $dark;
+                    }
+
+                    
+                }
+                position: relative;
+                .sub-item-wrap{
+                    position: absolute;
+                    left: -16px;
+                    top: 24px;
+                    width: 220px;
+                    background: $white;
+                    border-radius: 6px;
+                    padding: 10px 16px;
+                    display: none;
+                    font-size: 14px;
+                    li{
+                        margin: 4px 0;
+                        a{color: $dark;}
+                    }
+                }
+                &:hover{
+                    .sub-item-wrap{
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .user-sm{
+        color: $primary;
+    }
+    .logo{
+        height: 2.625rem;
+    }
+
+
+}
+
+
+
+// nav bottom
+.nav-bottom{
+  border-top: 1px solid lighten($color: $dark, $amount: 60) !important;
+  height: 3.3rem ;
+
+  .active{
+      border-top: 2px solid $primary;
+      padding: .6rem 0rem;
+      font-weight: 500;
+      margin-top: -.66rem;
+      color: $primary !important;
+  }
+  ul{
+      margin-top: .5rem;
+      .nav-item{
+          width: 3.5rem;
+          .nav-link{
+            font-size: .75rem;
+            transition: .4s;
+            &:hover{
+              i{color: $primary;}
+            }
+            span{
+              font-size: .72rem !important;
+              margin-top: -1px;
+            }
+          }
+      }
+  }
+}
+
+
+
+// media start 
+@media (max-width:1200px) {
+
+    // navbar css start
+    .navbar{
+        .offcanvas{
+            padding: 1.4rem 0;
+            .navbar-nav{
+                .nav-item{
+                    font-size: 14px;
+                }
+            }
+        }
+        .logo{
+            height: 1.6rem;
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    // navbar css start
+    .navbar{
+        
+        height: 60px;
+        .logo{height: 34px; }
+        .offcanvas{
+            padding: 1.4rem 0;
+            width: 280px;
+
+            .btn{margin-top: 40px;}
+        
+            .navbar-nav{
+                align-items: start !important;
+                .nav-item{
+                    margin-bottom: 13px;
+                    font-size: 13px;
+                    .nav-link{color: $dark}
+                }
+
+                
+            }
+            
+        }
+
+
+    }
+
+
+    
+}
+
+
+@media (min-width: 992px) {
+
+  .nav-bottom{
+      display: none;
+  }
+  
+}
+
+
+@media (max-width: 576px) {
+
+    .navbar{
+        height: 44px;
+        .navbar-toggler-icon {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+        .logo{
+            height: 1.1rem;
+        }
+    
+    
+    }
+}
+
+
+
+
+
